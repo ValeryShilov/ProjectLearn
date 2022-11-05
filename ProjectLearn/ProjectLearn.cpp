@@ -1,16 +1,11 @@
-﻿// ProjectLearn.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
 
 using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    int i;
-    for (i = 0; i <= 100; i++){
-        if (i % 2 == 0) cout << "nechetnoe" << endl;
+    for(int i = 0, i <= 100, i++){
+        if(i%2==0) cout << "nechetnoe" << endl;
     }    
     return 0;
 }
