@@ -4,7 +4,10 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    int i;
+    for (i = 0; i <= 100; i++){
+        if (i % 2 == 0) cout << "nechetnoe" << endl;
+    }    
     return 0;
 }
 
