@@ -4,6 +4,10 @@ using namespace std;
 
 int main()
 {
+    int i;
+    for (i = 0; i <= 100; i++){
+        if (i % 2 == 0) cout << "nechetnoe" << endl;
+    }    
     setlocale(LC_ALL, "Rus");
     int r, R, x, y;
     //x^2+y^2 == R^2
