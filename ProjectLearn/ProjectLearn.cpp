@@ -1,50 +1,32 @@
 ﻿#include <iostream>
-
+#include <math.h>
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    int a, b, c, m1, m2, m3;
-    char min_n, max_n, avr_n;
-    cin >> a >> b >> c;
-    if (a > b) {
-        if (c > a) {
-            m3 = a;
-            m1 = b;
-            m2 = c;
+    
+    int a[10]{ 12,2398,8,123,2134,-4,-6,9,23,3 };
+    int mx = -9999999, mn = 9999999;
+    int mx_n, mn_n, cnt = 0;
+
+    int leight = sizeof(a) / sizeof(a[0]);
+    
+    for (int i = 0; i < leight; i++) {
+        if (a[i] > mx) {
+            mx = a[i];
+            mx_n = i;
         }
-        else {
-            m2 = a;
-            if (c > b) {
-                m3 = c;
-                m1 = b;
-            }
-            else {
-                m3 = b;
-                m1 = c;
-            }
+        if (a[i] < mn) {
+            mn = a[i];
+            mn_n = i;
         }
     }
-    else {
-        if (c > b) {
-            m3 = b;
-            m1 = a;
-            m2 = c;
-        }
-        else {
-            m2 = b;
-            if (c > a) {
-                m3 = c;
-                m1 = a;
-            }
-            else {
-                m3 = a;
-                m1 = c;
-            }
-        }
+    for (int j = mx_n+1; j < mn_n; j++) {
+        if (a[j] > 0) cnt++;
     }
-    cout << "Минимальное:" << m1 << " " << "Максимальное:" << m2 << " " << "Cреднее:" << m3 << endl;
+    cout << cnt << endl;
+
     return 0;
 
 }
