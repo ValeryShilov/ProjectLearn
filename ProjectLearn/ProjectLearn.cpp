@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-#include <ctime>
+
 using namespace std;
 
 int main()
@@ -8,20 +8,15 @@ int main()
     
     int n, i, j, l;
     cin >> n;
-
+    
     for (i = 1; i <= n; i++) {
-        cout << "* ";
-    }
-    cout << endl;
-    for (j = 1; j <= n - 2; j++) {
-        cout << "*";
-        for (l = 1; l <= (n - 2)*2 +1; l++) {
+        for (j = 1; j <= i - 1; j++) {
             cout << " ";
         }
-        cout << "*" << endl;
-    }
-    for (int k = 1; k <= n; k++) {
-        cout << "* ";
+        for (int k = 1; k <= n - (i - 1); k++) {
+            cout << "*";
+        }
+        cout << endl;
     }
     return 0;
 
