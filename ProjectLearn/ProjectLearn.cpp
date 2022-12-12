@@ -6,17 +6,22 @@ int main()
 {
     setlocale(LC_ALL, "Rus");
     
-    int n, i, j, l;
+    int n, i, j, l, k;
     cin >> n;
     
-    for (i = 1; i <= n; i++) {
-        for (j = 1; j <= i - 1; j++) {
-            cout << " ";
+    if (n % 2 != 0) {
+        for (k = 1; k <= n / 2 + 1; k++) {
+            for (i = 1; i <= (n-k) / 2; i++) {
+                cout << " ";
+            }
+            for (j = 1; j <= k*2-1; j++) {
+                cout << "*";
+            }
+            for (l = 1; l <= (n-k) / 2; l++) {
+                cout << " ";
+            }
+            cout << endl;
         }
-        for (int k = 1; k <= n - (i - 1); k++) {
-            cout << "*";
-        }
-        cout << endl;
     }
     return 0;
 
