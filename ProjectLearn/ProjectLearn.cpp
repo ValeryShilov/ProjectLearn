@@ -12,7 +12,7 @@ int main()
     if (n % 2 != 0) {
         sp = n / 2;
         for (i = 1; i <= n / 2 + 1; i++) {
-            for (j = sp+10; j >= 0; j--) {
+            for (j = sp; j >= 0; j--) {
                 cout << " ";
             }
             for (k = 1; k <= n - sp * 2; k++) {
